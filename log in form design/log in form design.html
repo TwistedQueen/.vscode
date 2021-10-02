@@ -3,41 +3,69 @@
   <head>
     <meta charset="utf-8">
     <title>User Login</title>
-    
     <link rel="stylesheet" href="log in form design.css" type="text/css"/>
   </head>
   <body>
-    <header><b>User Login</b></header>
-      <div class="align">
-       
-        <div class="card">
-          <div class="head">
-            <div></div>
-            <a id= "login" class="selected" href="#login">Login</a>
-            <a id= "register"  href="#register">Register</a>
-            <div></div>
+    <div class="container">
+        <div class="login-register">
+          <div class="nav-buttons">
+            <button id="loginBtn" class="active">Login </button>
+            <button id="registerBtn">Register </button>
           </div>
-          <div class="tabs">
-            <form>
-              <div class="inputs">
-                <div class="input">
-                  <input placeholder="Username" type="text">        
-                </div> 
-                <div class="inputs">
-                  <div class="input">
-                    <input placeholder="Password" type="password">                            
-                  </div>  
-                  <label class="checkbox">
-                    <input type="checkbox">
-                    <span>Remenber me</span>
-                  </label>    
-              </div>
-              <button>Login</button>
-            </form>            
+          <div class="form-group">
+            <form action="" id="loginform">
+              <label for="username">username</label>
+              <input type="text" id="username">
+              <label for="password">password</label>
+              <input type="password" id="password">
+              <a href = "\\eks03v32\elevh$\eKaoIbr\GitHub\.vscode\Glass web\Index.html"><input type="submit" value="submit" class="submit"></a>
+            </form>
+            <form action="" id="registerform">
+              <label for="fullname">fullname</label>
+              <input type="text" id="username">
+              <label for="email">email</label>
+              <input type="text" id="email">
+              <label for="password">password</label>
+              <input type="password" id="password">
+              <label for="confirmpassword">confirm password</label>
+              <input type="text" id="confirmpassword">
+             <input type="submit" value="submit" class="submit"> 
+            </form>
+          </div>
+          <div id="forgot">
+            <a href="">forgot password?</a>
           </div>
         </div>
-      </div>
-    <script scr="js/jquery-3.3.1.min.js"></script>
-    <script scr="js/log in form design\log in form design.js"></script>
+    <script>
+      var loginBtn= document.getElementById("loginBtn");
+      var registerBtn= document.getElementById("registerBtn");
+      var loginform= document.getElementById("loginform");
+      var registerform= document.getElementById("registerform");
+      var forgot= document.getElementById("forgot");
+
+      registerBtn.onclick= function(){
+       registerform.style.left='0px';
+       registerform.style.opacity='1';
+        loginform.style.left='-500px';
+        loginform.style.opacity='0'
+        forgot.style.left='-500px';
+        forgot.style.opacity='0'
+        registerBtn.classList.add('active');
+        loginBtn.classList.remove('active');
+      }
+      loginBtn.onclick= function(){
+        loginform.style.left='0px';
+        loginform.style.opacity='1';
+        forgot.style.left='0px';
+        forgot.style.opacity='1';
+        registerform.style='500px';
+        registerform.style.opacity='0';
+        loginBtn.classList.add('active');
+        registerBtn.classList.remove('active');
+      }
+    </script>
   </body>
+  <noscript>
+    Your javascript is disable. Please enable to proceed.
+  </noscript>
 </html>
