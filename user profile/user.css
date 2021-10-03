@@ -8,7 +8,7 @@
     font-family: 'Josefin Sans', sans-serif;
  }
  body{
-    background: url("https://i2.pickpik.com/photos/537/56/906/sea-coffee-morning-breakfast-preview.jpg");
+    background: url("https://images.pexels.com/photos/1076758/pexels-photo-1076758.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -21,6 +21,7 @@
      width: 40%;
      display: flex;
      box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+     zoom: 90%;
  }
  .wrapper .left{
 width: 35%;
@@ -48,7 +49,7 @@ color: #fff;
  }
  .wrapper .right{
      width: 65%;
-     background: #fff;
+     background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.1));
      border-top-right-radius: 5px;
      border-bottom-right-radius: 5px;
      padding: 30px 25px;
