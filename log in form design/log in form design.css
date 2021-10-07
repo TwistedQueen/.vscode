@@ -75,7 +75,7 @@ button.active{
 .form-group label{
     text-transform:uppercase;
 }
-input.submit{
+  input.submit{
     font-weight: 700;
     text-transform:uppercase;
     font-size: 1em;
@@ -88,6 +88,14 @@ input.submit{
     border-radius: 29px;
     margin-top: 23px;
     background: linear-gradient(180deg, rgba(158,17,196,0.19091386554621848) 64%, rgba(228,3,200,0.10688025210084029) 93%);
+}
+.form-group a{
+    position: relative;
+    left: 180px;
+    margin-bottom: 20%;
+    font-weight: 700;
+    background: linear-gradient(180deg, rgba(158,17,196,0.19091386554621848) 64%, rgba(228,3,200,0.10688025210084029) 93%);
+    background-size: cover;
 }
 /* form positioning and animatio*/
 form,#forgot{
