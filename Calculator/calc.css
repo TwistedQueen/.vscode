@@ -11,17 +11,19 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .calculator{
-    width: 35%;
+    min-width: 20px;
     overflow: hidden;
     text-align: right;
     border-radius: 22px;
-    border: double;
  background-color: black;
+ box-shadow: 7PX 7PX 7PX rgb(94, 94, 99);
 }
+
 .display{
     width: 100%;
-    height: 17vh;
+    height: 10vh;
     grid-template-columns: repeat(4,66px);
     box-shadow:inset 6px 6px 13px #fff,
     inset 6px 6px 13px rgba(0,0,0.16); 
@@ -38,40 +40,51 @@ body{
     border: none;
      color: rgb(26, 25,25);
      background-color: aliceblue;
-     padding: 15px;
- 
+     padding: 20px;
 }
 
 button{
-    
     box-shadow: inset 6px 6px 13px #fff,
     6px 6px 13px rgba(0,0,0.16);
     border: none;
     background-color: #ecf0f3;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
     font-size: 20px;
-    font-weight: bold;
-   
+    transition: all 0,3s ease-in-out;
 }
 
-.equal{
-    
-    border-radius: 42px;
-    box-shadow: inset 6px 6px 13px #fff,
-    6px 6px 13px rgba(0,0,0.16);
-    background-color: #ecf0f3;
+button:hover{
+    font-weight: bold;
 }
 
 .output{
     font-size: 28px;
     padding: 10px;
-    font-weight: bold;
+   
 }
 
 .result{
     font-size: 25px;
-    padding: 20px;
+    padding: 10px;
+}
+
+@keyframes big{
+    0%{
+        font-size:25px;
+    }
+    100%{
+        font-size: 35px;
+    }
+}
+
+@keyframes small {
+    0%{
+        font-size: 28px;
+    }
+    100%{
+        font-size: 18px;
+    }
 }
