@@ -1,37 +1,43 @@
 //sellector
 const output = document.querySelector(".output");
 const result = document.querySelector(".result");
-const keys = Array.from( document.querySelectorAll("button"));
+const keys =document.querySelectorAll("button");
+
 
 //eventlistner
-keys.map(button =>{
-    button.addEventListener('click',calculate,(e)=>{
-        console.log('clicked');
-        console.log(e);
-        console.log(e.target);
-        console.log(e.target.innerText);
-    });
+keys.forEach(key=>{
+    key.addEventListener('click',calculate);
 });
 
 function calculate(){
     let buttonText = this.innerText;
-    if(buttonText=== "AC"){
+    if(buttonText==="AC"){
         output.innerText = "";
         result.innerText = "0";
+        result.style.animation = "";
+        output.style.animation = "";   
         return;
     }
-}
+ 
+    if(buttonText === "CE"){
+        output.textContent = output.textContent.substring(0,output.textContent.length-1);
+       return;
+    }
 
-if(buttonText === "C"){
-    output.textContent = output.textContent. substr(0, output.textContent.length-1);
-    return;
-}
+    if(buttonText=== "="){
+        result.innerText= eval(output.innerText)
+        result.style.animation = "big 0.5s ease-in-out";
+        output.style.animation = "small 0.5s ease-in-out";
+        result.style.animationFillMode = "forwards";
+        output.style.animationFillMode = "forwards";
+    }
 
-if (buttonText === "="){
-    console.log ("COME TO THIS LATER")
-}
+    else{
+        output.textContent += buttonText;
+        return;
+    }}
 
-else{
-    output.textContent += buttonText;
-    return;
-}
+
+
+
+
